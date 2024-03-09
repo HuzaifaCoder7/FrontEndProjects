@@ -1,0 +1,66 @@
+
+
+body{background-color: #202124 ;}
+
+
+
+#logo{
+    margin-top: 16.1rem;
+}
+
+
+
+#search{
+    width: 38rem;
+    
+}
+#search:hover{
+    background-color: #313131;
+    transition: 0.1s;
+}
+
+
+
+#btn{
+    width: 6rem;
+    height: 2rem;
+}
+
+
+
+#gbtn{
+    margin-left: 28rem;
+    width: 10rem;
+    height: 2rem;
+}
+#ibtn{
+    width: 10rem;
+    height: 2rem; 
+     
+}
+#gbtn:hover,#ibtn:hover{
+    background-color: #313131;
+    border-color: white;
+    transition: 0.2s;
+}
+
+
+
+#nav,#lower{
+    background-color: #333333;
+}
+#btext{
+    margin-left: 31rem;
+    margin-top: 2rem;
+}
+#nt{
+    color:#9aa0a6
+}
+#nt:hover{
+    color:white;
+    transition: 0.2s;
+}
+#lan:hover{
+   color:blue;
+   transition: 0.4s;
+}

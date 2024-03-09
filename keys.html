@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keys</title>
+</head>
+<body style="background-color: #212121; color:aliceblue;">
+    
+    <div id="container" style="justify-content: center; text-align: center; margin-top: 20rem;">
+          Press any Key on Keyboard:
+    </div>
+</body>
+<script>
+    let input = document.getElementById('container')
+    window.addEventListener('keydown',(event)=>{
+       input.innerHTML= `
+       <div id='container' style="margin-left:32rem;">
+        <table style="border: 1px solid white;">
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${(event.key==' ')?'Space':event.key}</td>
+    <td>${event.keyCode}</td>
+    <td>${event.code}</td>
+  </tr>
+ 
+</table>
+        </div>
+       `
+    })
+</script>
+</html>

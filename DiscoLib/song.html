@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=https://cdn.tailwindcss.com></script>    
+    <title>DiscoLib</title>
+    <style>
+        #nav1:hover{color:red; transition: 0.5s;}
+        #nav2:hover{color:red; transition: 0.5s;}
+        #nav3:hover{color:red; transition: 0.5s;}
+        #ul{
+        border: 3px solid brown;
+        margin-left: 2rem;
+        height: 46rem;
+        padding: 1rem;
+        border-radius: 25px;
+    }
+    #tim:hover{background-color: blueviolet; transition: 0.6s; color:white;}
+    #form{
+        border: 0.5px solid white;
+        width: 58rem;
+        height: 44rem;
+        padding:4rem;
+        border-radius: 25px;
+        border-color: aqua;
+        /* border-bottom-color: blueviolet;
+        border-right-color: blueviolet; */
+        margin-top: -45rem;
+    }
+    #tim{
+        border:1px solid violet;
+        width:10rem;
+        margin-left: 35rem;
+        margin-top: -2rem;
+        border-radius: 20px;
+        height: 3rem;
+        text-align: center;
+    }
+    
+
+    </style>
+</head>
+<body style="background-color:#111111; color:white;">
+    <div class="flex-row">
+    <h1 class="text-4xl ml-4 mt-2 font-bold cursor-pointer">Disco<span class="text-red-800">Lib</span></h1>
+    <div class="text-2xl text-center" id="tim"></div>
+    <br>
+    <p class="ml-6 -mt-5 text-sm text-red-800 font-semibold">All Songs Library</p>
+    <nav class="flex justify-end" id="nav">
+        <ul class="mx-4 text-lg font-bold cursor-pointer" id="nav1">Home</ul>
+        <ul class="mx-4 text-lg font-bold cursor-pointer" id="nav2">Songs</ul>
+        <ul class="mx-4 text-lg font-bold cursor-pointer" id="nav3">About US</ul>
+    </nav>
+    <hr>
+</div>
+<ul class="mt-8 ml-1  w-44 h-96 text-center" id="ul">
+    <li class="mb-6 cursor-pointer text-white " id="ul1">English Songs</li>
+    <li class="cursor-pointer text-white ">Hindi Songs</li>
+</ul>
+
+<form class="ml-72 -mt-96 shadow-xl" id="form">
+    
+    <!-- <audio controls class="hidden" id="aud">
+        <source src="azeri bgm.mp3">
+    </audio> -->
+    <span class="all">
+    <audio src="azeri bgm.mp3" id="jb0"></audio>
+    <p class="text-xl w-36">Azeri BGM: </p>
+    <button onclick="p0()" type="button" class="bg-red-700 w-24 h-6 ml-44 rounded-md ">Play</button>
+    <button onclick="pau0()" class="bg-red-700 w-24 h-6 ml-44 rounded-md">Pause</button>
+    <br>
+    <br>
+    <p class="text-xl w-36">John-Wick Theme: </p>
+    <audio src="John Wick Bgm Ringtone.mp3" id="jb1"></audio>
+    <button onclick="p()" type="button" class="bg-red-700 w-24 h-6 ml-44 rounded-md ">Play</button>
+    <button onclick="pau1()" class="bg-red-700 w-24 h-6 ml-44 rounded-md">Pause</button>
+    <br><br>
+    <p class="text-xl w-36">We Rollin (Shubh): </p>
+    <audio src="We Rollin (Official Audio) - Shubh.mp4" id="jb2"></audio>
+    <button onclick="p2()"  type="button" class="bg-red-700 w-24 h-6 ml-44 rounded-md ">Play</button>
+    <button onclick="pau2()" class="bg-red-700 w-24 h-6 ml-44 rounded-md">Pause</button>
+    <br><br>
+    <p class="text-xl w-36">Badnaam (Sidhu): </p>
+    <audio src="Duniya Da Kaam Badnaam Kare Soniye Jat Jo Bhi Kare Sareaam kare Soniye  Sidhu Moose Wala New Song.mp3" id="jb3"></audio>
+    <button onclick="p4()" type="button" class="bg-red-700 w-24 h-6 ml-44 rounded-md ">Play</button>
+    <button onclick="pau3()" class="bg-red-700 w-24 h-6 ml-44 rounded-md">Pause</button>
+    <br><br>
+    <p class="text-xl w-36">Unstoppable: </p>
+    <audio src="Sia  Unstoppable Lyrics.mp3" id="jb4"></audio>
+    <button onclick="p5()" type="button" class="bg-red-700 w-24 h-6 ml-44 rounded-md ">Play</button>
+    <button onclick="pau6()" class="bg-red-700 w-24 h-6 ml-44 rounded-md">Pause</button>
+</span>
+</form>
+
+
+
+
+</body>
+<script>
+    let date = new Date()
+    let b5 = date.toLocaleString('default',{
+        hour:"2-digit",
+        minute:"2-digit",
+     
+        
+    })
+    document.getElementById('tim').innerText=b5;
+    
+    
+    //^       For SONGS
+    let a = document.querySelector('#jb0')
+    function p0(){
+        a.play();
+    }   
+   function pau0(){
+       a.pause();
+   }
+
+   
+//      For John-wick
+ let pp = document.querySelector('#jb1')
+ function p(){
+    pp.play()
+ }
+function pau1(){
+    pp.pause();
+}
+
+//     For We rollin
+let p1 = document.querySelector('#jb2')
+function p2(){
+    p1.play()
+}
+function pau2(){
+    p1.pause();
+}
+
+//     For Sidhu
+let p3 = document.querySelector('#jb3')
+function p4(){
+    p3.play()
+}
+function pau3(){
+    p3.pause();
+}
+
+
+let p7 = document.querySelector('#jb4')
+function p5(){
+    p7.play()
+}
+function pau6(){
+    p7.pause();
+}
+
+
+
+
+
+</script>
+</html>
+<!-- w-44 p-6 -->

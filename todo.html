@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TODO</title>
+    <style>
+        #top{
+            margin-top: 1.25rem;
+            margin-left: 1.25rem;
+            font-size: 2.25rem;
+            color:aliceblue;
+            cursor: pointer;
+        }
+       #sidebar{
+        border:1px solid white;
+        width: 17rem;
+        height: 51rem;
+        border-top-color: white;
+        border-bottom-color: #111111;
+        color:aliceblue;
+        font-size: larger;
+       
+       
+       }
+       #middlebar{
+        border: 1px solid orange;
+        width:58rem;
+        height: 48rem;
+        margin-left: 20rem;
+        margin-top: -50rem;
+        border-radius: 20px;
+       }
+       #search{
+         width:50rem;
+         height: 3rem;
+         margin-left: 2rem;
+         background-color: transparent;
+         border:0.5px solid orangered;
+         margin-top:0px;
+         border-radius: 10px;
+         text-align: center;
+         color: cyan;
+       }
+       #sbtn{
+        background-color: cyan;
+        margin-left: 1rem;
+        font-size: xx-large;
+        text-align: center;
+        font-weight: bolder;
+        border-radius: 15%;
+        width: 60px;
+        height: 60px;
+    
+     }
+     #dbtn{
+        font-size: x-large;
+        text-align: center;
+        font-weight: bolder;
+        background-color: transparent;
+        border:none;
+        margin-left: 53rem;
+        margin-top: 1rem;
+        width: 40px;
+        height: 40px;
+     }
+     #dbtn:hover{
+        color:red;
+        transition: 0.4s;
+     }
+       #taskbar{
+        width:50rem;
+        height: 37rem;
+        margin-left: 4rem;
+        margin-top: 2rem;
+        
+        
+        font-size: larger;
+        color:aqua;
+        font-weight: bold;
+        padding: 2px;
+        }
+        #li1,#li2{
+            margin-top: 3rem;
+            margin-left: 1.75rem;       
+            cursor: pointer;
+         }
+       #li1:hover,#li2:hover{
+        color:blueviolet;
+        transition: 0.4s;
+       }
+    </style>
+</head>
+<body style="background-color: 111111;">
+    <nav ><h1 id="top">TODO Web:</h1></nav><hr>
+    <div id="sidebar">
+         <li  id="li1" >Create a new NOTE:</li>
+         <li  id="li2" >Delete NOTE:</li>
+    </div>
+
+    <div id="middlebar" class="shadow-inner shadow-orange-700">
+        <button id="dbtn">X</button>
+         
+
+        <form action="" id="taskbar"></form>
+        <span>
+            <input type="text" name="" onfocus="this.value=''" id="search" class="">
+            <button id="sbtn" >&#9998;</button>
+        </span>
+            
+            
+         
+    </div>
+</body>
+<script>
+   
+   document.getElementById('top').addEventListener('click',()=>{
+    window.location.href='todo.html'
+   })
+    let count = 1;
+    document.getElementById('sbtn').addEventListener('click',()=>{
+        let inp = document.getElementById('search').value
+        let m = document.getElementById('taskbar');
+        // m.innerText+=inp;
+        m.innerHTML+=`<div id="task" style="margin-bottom:1rem; color:orange;"><span style='font-size:1.25rem;'>${count++}:</span> <span style='color:cyan;'>${inp}</span></div><hr>`;
+        
+      
+       
+    })
+    
+    window.addEventListener('keydown',(event)=>{
+        if(event.keyCode==13){
+        let inp = document.getElementById('search').value
+        let m = document.getElementById('taskbar');
+        
+        m.innerHTML+=`<div style="margin-bottom:2rem;">${count++} ${inp}</div>`;
+       
+    }
+    
+    })
+    
+
+    document.getElementById('dbtn').addEventListener('click',(event)=>{
+        document.getElementById('taskbar').innerText=' ';
+         
+        count = 1;
+    })
+   
+   
+   
+
+
+
+    
+</script>
+</html>

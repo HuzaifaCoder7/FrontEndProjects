@@ -1,0 +1,54 @@
+.body{
+    background-color: #F0F2F5;
+}
+#box{
+    
+    margin-left: 46rem;
+}
+#ei{
+    
+    width: 22rem;
+}
+#pi{
+    
+    width: 22rem;
+}
+
+#ei:hover,#pi:hover{
+    border: 0.25px solid blue;
+    transition: 0.4s;
+}
+#lbtn{
+    font-size: 20px;
+    background-color: #1877F2;
+    width: 22rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+#forgot{
+    margin-top: 16rem;
+    margin-left: 8rem;
+    color:#1877F2;
+}
+#forgot:hover{
+    text-underline-offset: 3;
+}
+
+#create{
+    
+    background-color: #42B72A;
+    width:12rem;
+    height: 3rem;
+}
+
+#nav1{
+    border:1px solid white;
+    width: 140rem;
+    height: 10rem;
+    margin-top: 12.4rem;
+}
+#nav2{
+    font-size: 12px;
+    font-family: sans-serif;
+    color:#737373;
+}
